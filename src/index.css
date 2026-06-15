@@ -1,0 +1,97 @@
+:root {
+  --royal-blue: #002366;
+  --royal-blue-dark: #001233;
+  --royal-blue-mid: #0a2a5e;
+  --royal-blue-light: #1a4480;
+  --gold: #d4af37;
+  --gold-light: #f0d78c;
+  --gold-dark: #b8960c;
+  --parchment: #f5f0e1;
+  --parchment-dark: #e8dfc8;
+  --ink: #1a1a2e;
+  --ink-muted: #4a4a6a;
+  --white: #faf8f3;
+
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-ui: 'Segoe UI', system-ui, sans-serif;
+
+  --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --radius: 4px;
+  --max-width: 1100px;
+  --nav-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--white);
+  background: var(--royal-blue-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: var(--font-ui);
+  font-size: 15px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--royal-blue-dark);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
